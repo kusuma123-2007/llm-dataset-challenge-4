@@ -12,25 +12,21 @@ This is the core component inside every modern LLM (GPT, BERT, LLaMA, etc).
 ## A complete Mini Transformer Block containing:
 
 ✔ Multi-Head Self-Attention
-
 Allows tokens to interact with each other.
 
 ✔ Layer Normalization
-
 Stabilizes training and prevents exploding activations.
 
 ✔ Residual Connections
-
 Enable deep models and stable gradient flow.
 
 ✔ Feed-Forward Network (FFN)
-
 Processes each token embedding to transform information.
 
 This block is the engine that drives language models.
 
 📂 Repository Structure
-challenge4-transformer-block/
+Challenge4-transformer-block/
 │
 ├── src/
 │   ├── transformer_block.py
@@ -58,35 +54,26 @@ A Transformer Block consists of two major sub-layers:
 ## 1️⃣ Multi-Head Self-Attention
 
 This layer allows each token to "look" at every other token and decide:
-
-which words are important
-
-how much attention to give each word
+Which words are important
+How much attention to give each word
 
 It uses:
 
 Query (Q)
-
 Key (K)
-
 Value (V)
-
 Scaled dot-product attention
-
 Multiple heads to capture multiple types of relationships
 
 ## 2️⃣ Feed-Forward Network (FFN)
 
 A two-layer MLP applied on every token independently.
-
 This increases model capacity by transforming each token’s representation.
 
 ## 3️⃣Residual Connections
 
 Each sub-layer returns:
-
 output = LayerNorm(x + sublayer(x))
-
 
 This stabilizes training and lets information flow deeper.
 
